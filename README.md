@@ -28,11 +28,12 @@ python -m campusfix.cli
 
 ## Before you start
 
-1. Read [CONTRIBUTING.md](CONTRIBUTING.md).
-2. Inspect the `campusfix/`, `data/`, and `tests/` directories.
-3. Create `ARCHITECTURE.md` from `ARCHITECTURE_TEMPLATE.md`.
-4. Wait until kick-off to begin making challenge commits. Do not publish challenge solutions before the announced start time.
-5. At kick-off, use the three official GitHub issues shared by the organisers and create a separate branch and pull request for each bug fix.
+1. Read [STUDENT_PROBLEM_STATEMENT.md](STUDENT_PROBLEM_STATEMENT.md) for the full challenge, schedule, rubric and submission requirements.
+2. Read [CONTRIBUTING.md](CONTRIBUTING.md).
+3. Inspect the `campusfix/`, `data/`, and `tests/` directories.
+4. Create `ARCHITECTURE.md` from `ARCHITECTURE_TEMPLATE.md`.
+5. Wait until kick-off to begin making challenge commits. Do not publish challenge solutions before the announced start time.
+6. At kick-off, use the three official GitHub issues shared by the organisers and create a separate branch and pull request for each bug fix.
 
 ## Required work
 
@@ -43,7 +44,7 @@ python -m campusfix.cli
 - Maintain `PROJECT_NOTES.md` and disclose AI use in `AI_USAGE.md` if applicable.
 - Submit your repository and pull-request links and a two-minute demo video.
 
-The detailed student problem statement and schedule will be shared by the organisers. Do not use a different repository for this evaluation.
+Do not use a different repository for this evaluation.
 
 ## Project map
 
