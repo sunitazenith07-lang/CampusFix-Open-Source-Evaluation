@@ -8,6 +8,9 @@ version = "1.0.0"
 description = "Starter repository for the CampusFix open-source evaluation"
 requires-python = ">=3.10"
 
+[tool.setuptools]
+packages = ["campusfix"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
