@@ -1,0 +1,8 @@
+[
+  {"id": 101, "title": "Wi-Fi not working in Lab 2", "category": "IT", "priority": "High", "status": "Open", "description": "Devices cannot connect to the lab network."},
+  {"id": 102, "title": "Projector not turning on", "category": "Classroom", "priority": "Medium", "status": "In Progress", "description": "The projector in Room 204 does not start."},
+  {"id": 103, "title": "Missing robotics kit", "category": "Lab Resources", "priority": "High", "status": "Open", "description": "One robotics kit is missing from the storage cabinet."},
+  {"id": 104, "title": "Student portal password reset", "category": "IT", "priority": "Low", "status": "Resolved", "description": "A student needed help resetting their password."},
+  {"id": 105, "title": "Wi-Fi signal weak in library", "category": "IT", "priority": "Medium", "status": "In Progress", "description": "Signal drops near the reading area."},
+  {"id": 106, "title": "Broken HDMI cable", "category": "Classroom", "priority": "Low", "status": "Resolved", "description": "A replacement cable was issued."}
+]
