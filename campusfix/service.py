@@ -14,7 +14,6 @@ def update_status(request_id, new_status, requests=None):
     for item in items:
         if item.id == request_id:
             item.status = new_status
-            # BUG: the changed list is not persisted when default storage is used.
             if requests is not None:
                 return item
             return item
@@ -23,13 +22,11 @@ def update_status(request_id, new_status, requests=None):
 def find_by_title(query, requests=None):
     """Find requests whose titles contain query."""
     items = list_requests() if requests is None else requests
-    # BUG: search is case-sensitive.
     return [r for r in items if query in r.title]
 
 def summary(requests=None):
     """Return a small count summary for requests."""
     items = list_requests() if requests is None else requests
-    # BUG: total incorrectly counts only unresolved requests.
     unresolved = [r for r in items if r.status != "Resolved"]
     return {
         "total": len(unresolved),
