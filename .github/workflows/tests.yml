@@ -11,6 +11,9 @@ jobs:
   tests:
     name: Automated tests (Python 3.11)
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: student-starter
     steps:
       - name: Check out the exact commit being tested
         uses: actions/checkout@v4
