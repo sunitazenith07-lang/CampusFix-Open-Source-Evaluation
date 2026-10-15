@@ -37,7 +37,7 @@ jobs:
 
           report = Path("pytest-report.xml")
           if not report.exists():
-              summary = "## CampusFix test results\\n\\nNo test report was produced. Check the install and test logs.\\n"
+              summary = "## CampusFix test results\n\nNo test report was produced. Check the install and test logs.\n"
           else:
               root = ET.parse(report).getroot()
               suites = [root] if root.tag == "testsuite" else list(root.iter("testsuite"))
@@ -47,12 +47,12 @@ jobs:
               skipped = sum(int(s.attrib.get("skipped", 0)) for s in suites)
               passed = total - failures - errors - skipped
               summary = (
-                  "## CampusFix test results\\n\\n"
-                  f"- **Total:** {total}\\n"
-                  f"- **Passed:** {passed}\\n"
-                  f"- **Failed:** {failures}\\n"
-                  f"- **Errors:** {errors}\\n"
-                  f"- **Skipped:** {skipped}\\n"
+                  "## CampusFix test results\n\n"
+                  f"- **Total:** {total}\n"
+                  f"- **Passed:** {passed}\n"
+                  f"- **Failed:** {failures}\n"
+                  f"- **Errors:** {errors}\n"
+                  f"- **Skipped:** {skipped}\n"
               )
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as handle:
               handle.write(summary)
