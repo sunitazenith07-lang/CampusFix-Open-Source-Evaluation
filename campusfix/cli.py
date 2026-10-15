@@ -1,21 +1,26 @@
-from .service import list_requests, find_by_title, update_status, summary
+"""Small command-line entry point used to explore CampusFix."""
+from .service import filter_requests, list_requests, summary
 
-def main():
+def main() -> None:
     requests = list_requests()
     print("CampusFix — Community Helpdesk")
     print(f"Loaded {len(requests)} requests")
     print("\nRequests:")
-    for r in requests:
-        print(f"#{r.id} [{r.status} | {r.priority}] {r.title} ({r.category})")
-    print("\nTitle search demo: type a word, or press Enter to skip.")
-    query = input("> ").strip()
-    if query:
-        matches = find_by_title(query, requests)
-        print(f"{len(matches)} match(es)")
-        for r in matches:
-            print(f"#{r.id}: {r.title}")
+    for item in requests:
+        print(f"#{item.id} [{item.status} | {item.priority}] {item.title} ({item.category})")
+    query = input("\nSearch title (Enter to skip): ").strip()
+    status = input("Status filter (Open/In Progress/Resolved, Enter to skip): ").strip() or None
+    priority = input("Priority filter (Low/Medium/High, Enter to skip): ").strip() or None
+    try:
+        matches = filter_requests(requests, query=query, status=status, priority=priority)
+    except ValueError as error:
+        print(f"Invalid filter: {error}")
+        return
+    if not matches:
+        print("No requests match the selected criteria.")
+    for item in matches:
+        print(f"#{item.id}: {item.title} [{item.status} | {item.priority}]")
     print("\nSummary:", summary(requests))
-    print("\nThis starter CLI is intentionally small. Improve the service and demonstrate your features.")
 
 if __name__ == "__main__":
     main()
