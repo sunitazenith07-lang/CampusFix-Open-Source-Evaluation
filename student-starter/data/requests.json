@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Wi-Fi disconnects in library",
+    "category": "IT",
+    "priority": "High",
+    "status": "Open",
+    "description": "Connection drops every few minutes."
+  },
+  {
+    "id": 2,
+    "title": "Projector has no display",
+    "category": "Classroom",
+    "priority": "Medium",
+    "status": "In Progress",
+    "description": "Room B204 projector turns on but shows no image."
+  },
+  {
+    "id": 3,
+    "title": "Lab keyboard missing",
+    "category": "Facilities",
+    "priority": "Low",
+    "status": "Resolved",
+    "description": "Keyboard was missing from workstation 14."
+  },
+  {
+    "id": 4,
+    "title": "Student portal login fails",
+    "category": "IT",
+    "priority": "High",
+    "status": "Open",
+    "description": "Portal rejects correct credentials."
+  },
+  {
+    "id": 5,
+    "title": "Wi-Fi access in auditorium",
+    "category": "IT",
+    "priority": "Medium",
+    "status": "Resolved",
+    "description": "Guest network was unavailable."
+  },
+  {
+    "id": 6,
+    "title": "Broken chair in seminar room",
+    "category": "Facilities",
+    "priority": "Low",
+    "status": "Open",
+    "description": "Chair is unstable and needs repair."
+  }
+]
