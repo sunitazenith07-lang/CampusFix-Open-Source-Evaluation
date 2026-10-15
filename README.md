@@ -2,63 +2,38 @@
 
 **Zenith School of AI | Individual Build Challenge**
 
-CampusFix is a small existing Python application for managing campus helpdesk requests. This repository is the official starter code for the open-source evaluation.
+## Official student package
 
-## Your mission
-
-Understand the existing codebase, fix the three issues shared by the organisers at kick-off, implement search and filtering, choose one additional feature, write tests, and explain your contribution.
+The complete student starter project lives in the [student-starter folder](student-starter/). Work from that folder; it contains the intentionally imperfect app, the 110-test behaviour contract, project templates, and the problem statement.
 
 ## Getting started
 
-- Python 3.10 or newer
-- Git
+Requirements: Python 3.10 or newer and Git.
 
-Install dependencies and run the starter checks:
+From the repository root, enter the student package:
 
 ```bash
+cd student-starter
+python -m pip install -e .
 python -m pip install -r requirements-dev.txt
 python -m pytest -q
-```
-
-Run the application:
-
-```bash
 python -m campusfix.cli
 ```
 
-## Before you start
+The starter tests include deliberate failures. At the start, **86 tests pass and 24 fail**; students should fix the underlying behaviours rather than remove or weaken tests. On GitHub, the Actions run reports exact pass/fail/error/skipped counts and fails the check until the suite is passing.
 
-1. Read [STUDENT_PROBLEM_STATEMENT.md](STUDENT_PROBLEM_STATEMENT.md) for the full challenge, schedule, rubric and submission requirements.
-2. Read [CONTRIBUTING.md](CONTRIBUTING.md).
-3. Inspect the `campusfix/`, `data/`, and `tests/` directories.
-4. Create `ARCHITECTURE.md` from `ARCHITECTURE_TEMPLATE.md`.
-5. Wait until kick-off to begin making challenge commits. Do not publish challenge solutions before the announced start time.
-6. At kick-off, use the three official GitHub issues shared by the organisers and create a separate branch and pull request for each bug fix.
+## Read before coding
 
-## Required work
+1. [Student problem statement](student-starter/STUDENT_PROBLEM_STATEMENT.md)
+2. [Contribution instructions](student-starter/CONTRIBUTING.md)
+3. [Architecture template](student-starter/ARCHITECTURE_TEMPLATE.md)
+4. [Testing template](student-starter/TESTING_TEMPLATE.md)
+5. [AI-use declaration template](student-starter/AI_USAGE_TEMPLATE.md)
 
-- Fix all three organiser-reported issues.
-- Add case-insensitive title search and combined status/priority filters.
-- Complete one additional feature: request summary, duplicate request warning, or priority view.
-- Add/update tests and document at least five cases in `TESTING.md`.
-- Maintain `PROJECT_NOTES.md` and disclose AI use in `AI_USAGE.md` if applicable.
-- Submit your repository and pull-request links and a two-minute demo video.
+At the announced kick-off, the organisers will share the issues to reproduce and fix. Create focused branches and pull requests; follow the integrity and AI-use requirements in the problem statement.
 
-Do not use a different repository for this evaluation.
+## For organisers and reviewers
 
-## Project map
-
-```text
-campusfix/       Application code
-  models.py      Request data model
-  storage.py     JSON storage helpers
-  service.py     Request-management logic
-  cli.py         Command-line interface
-data/            Sample request data
-tests/           Starter automated tests
-.github/         GitHub Actions test workflow
-```
-
-## Academic integrity and AI use
-
-This is an individual evaluation. AI tools and online learning resources are permitted, but cite resources, declare AI use, test the changes, and be ready to explain every submitted change. Do not remove or bypass tests/checks, and do not share secrets or private personal data with AI tools.
+- Public student-facing files: in the student-starter folder.
+- Automated test reporting: [.github/workflows/tests.yml](.github/workflows/tests.yml).
+- The private corrected reference solution must **not** be committed to this public repository.
